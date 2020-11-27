@@ -29,8 +29,12 @@ public class Subject {
         BufferedReader br = new BufferedReader(fr);
 
         while (br.ready()){
-            data = br.readLine();
-            System.out.println(data);
+            String line = br.readLine();
+            //System.out.println(line);
+
+            String[] items = line.split(",");
+            String result = String.format(fmt,items[0],items[1],items[2],items[3]);
+            System.out.println(result);
         }
         br.close();
         fr.close();
